@@ -9,30 +9,66 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services'
+import Upload from './pages/Upload'
+import Payment from './pages/Payment'
+
+//Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 //Navigation
-import {Routes, Route, Link} from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 
 
-function App(){
-  return(
+function App() {
+  return (
     <div>
-      <nav>
+      <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div className="container">
 
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/services" >Services</Link>
+          <Link className="navbar-brand" to="/">
+            ShopVibe
+          </Link>
 
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/services" element={<Services/>} />
-        </Routes>
+          <div className="navbar-nav">
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
 
+            <Link className="nav-link" to="/about">
+              About
+            </Link>
+
+            <Link className="nav-link" to="/contact">
+              Contact
+            </Link>
+
+            <Link className="nav-link" to="/services">
+              Services
+            </Link>
+
+            <Link className="nav-link" to="/upload">
+              Upload Products
+            </Link>
+            <Link className="btn btn-success" to="/payment">
+              Pay Now
+            </Link>
+          </div>
+
+        </div>
       </nav>
-      
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/upload" element={<Upload />}  />
+        <Route path="/payment" element={<Payment />}  />
+      </Routes>
+
+
+
     </div>
 
 

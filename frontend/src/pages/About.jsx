@@ -1,10 +1,35 @@
+//Internal CSS
+
 function About(){
+
+    const headingstyles = {
+        color:"red", 
+        fontWeight:"bold",
+        fontSize:"60px"
+    }
+
+    const paragraphStyles = {
+        fontStyle:"italic"
+    }
+
+    const imageStyles = {
+        width: "400px",
+        height: "200px",
+        borderRadius: "10px"
+    }
+
+
     return(
         <div>
-            <h1>About ShopVibe</h1>
-            <marquee behavior="" direction="">Want to Knnow more?</marquee>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus labore dolore alias nostrum voluptatibus maiores? Excepturi ad a alias, magnam blanditiis fuga cupiditate? Tenetur fugit sunt voluptates accusamus! Libero, vel.
-            Commodi blanditiis architecto sint fugit nisi autem aut harum. Consectetur fuga at ratione aliquid laudantium soluta possimus illo facere culpa tempora placeat reiciendis, dicta fugit iusto? Nihil omnis exercitationem optio?</p>
+            <h1 style={headingstyles}>About ShopVibe</h1>
+
+            <marquee behavior="" direction="" style={paragraphStyles}>Want to Knnow more?</marquee>
+
+            <p style={paragraphStyles}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quas perferendis nesciunt sit consequatur, quam accusantium optio illo amet sunt modi, voluptas aliquid. Quia minus, quisquam in quos necessitatibus placeat?
+            Enim illo delectus exercitationem repellat quisquam rem ipsa earum ea incidunt fugit odio totam eius aut ullam aliquid dolorem est saepe, quo harum ad rerum maiores soluta illum quod! Obcaecati?
+            Voluptatum consequatur eius commodi totam temporibus minus ullam suscipit quod debitis consectetur, nulla atque quia. Aperiam commodi quam voluptates magnam, eaque incidunt quod nemo animi iusto voluptatum, nobis quae consectetur!</p>
+
+            <img src="images/car2.png" alt="" style={imageStyles}/>
 
         </div>
     )
